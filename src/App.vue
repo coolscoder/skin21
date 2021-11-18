@@ -1,14 +1,17 @@
 <template>
   <div container>
-    <div title v-text="title" />
+    <div title v-text="head" />
     <div data-link-container>
-      <div
-        data-link
+      <a
+        href="#"
+        links
         v-for="(link, index) in links"
         v-bind:key="index"
         v-text="link"
       />
     </div>
+    <div title foot v-text="foot" />
+    <div round />
   </div>
 </template>
 
@@ -16,20 +19,22 @@
   export default {
     name: 'App',
     data: () => ({
-      title: "SAVAGE FENTY",
+      head: "TAMARINA TEAS",
       links: [
         '#SAVAGEX',
-        '#SAVAGEXSURVIVORS',
-        '#UXTRA',
-        'NEW DROPS',
-        'SAVAGE X FIT GUIDE',
-        'YOUTUBE'
-      ]
+        'NEWDROPS',
+        'SAVAGE X FIT',
+        'X SURVIVORS',
+        'MEWDROPS',
+        'SAVAGE X FIT',
+        'SAVAGE X FIT'
+      ],
+      foot: "@TAMARINACO",
     }),
   }
 </script>
 
-<style lang="scss">
+<style>
   body {
     background: #fff;
     color: #fff;
@@ -39,34 +44,44 @@
     margin: 0;
   }
   [container] {
-    background-color: #fff;
+    background-color: #ff5b2b;
     border-radius: 20px;
-    padding: 3vh;
+    padding: 3vh 10vw;
     height: 94vh;
     overflow: hidden;
-    background-color: black;
   }
   [title] {
-    font-size: 60px;
-    height: 30vh;
-    color: #d1ac6b;
+    font-size: 30px;
+    height: 12vh;
+    color: #ffe231;
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+  [foot] {
+    color: white;
+    justify-content: end;
   }
   [data-link-container] {
+    background-color: #ff8fe9;
     display: flex;
     flex-direction: column;
-    height: 64vh;
+    height: 70vh;
     justify-content: space-around;
   }
-  [data-link] {
-    width: 100%;
-    padding: 15px 0;
-    border: 1px solid white;
-    background: transparent;
-    &:hover {
-      color: #cb1f63;
-      background-color: #ede3b9;
-    }
+  [links] {
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+  }
+  [round] {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background-color: #574dfd;
+    position: absolute;
+    top: calc(50vh - 25vw);
+    left: calc(50% - 25vw);
+    z-index: 1;
   }
 </style>
