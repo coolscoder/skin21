@@ -75,13 +75,13 @@
     z-index: 2;
   }
   [round] {
-    width: 50vw;
-    height: 50vw;
+    width: 60vw;
+    height: 60vw;
     border-radius: 50%;
     background-color: #574dfd;
     position: absolute;
-    top: calc(50vh - 25vw);
-    left: calc(50% - 25vw);
+    top: calc(50vh - 30vw);
+    left: calc(50% - 30vw);
     z-index: 1;
   }
 </style>
